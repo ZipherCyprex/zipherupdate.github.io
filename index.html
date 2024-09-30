@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zipher Device</title>
+    <meta name="description" content="Easily allow users to install Ble jammer." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <style>
+        @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+                @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Italic.otf') format('opentype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+                @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+                        @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Bold Italic.otf') format('opentype');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "iconic", Roboto, Ubuntu, sans-serif;
+            padding: 0;
+            margin: 0;
+            line-height: 1.6;
+            font-size: 16px;
+            background-color: #fefcff;
+            color: #000;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+            margin: 0 0 20px;
+        }
+
+        h1 {
+            font-size: 4.6rem;
+            font-family: iconic;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #960cf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .button-row {
+            margin: 40px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            border-top: 1px solid #66089c;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer .initiative {
+            font-style: italic;
+            margin-top: 16px;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        label {
+            
+            font-family: iconic;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px 20px;
+            display: block;
+            
+        }
+
+        .option {
+            margin-top: -.2em;
+        }
+
+        .vv {
+            border-bottom: 1px solid #66089c;
+            padding: 13px 0;
+        }
+
+        .info1 {
+            font-family: iconic;
+            
+            border-radius: 15px;
+            background-color: #1e0030;
+            padding: 20px;
+            margin: 10px auto;
+
+        }
+
+        .version {
+            line-height: 10px;
+            font-size: 2px;
+            text-align: left;
+            margin-bottom: 20px;
+            padding: 15px 10px;
+            border-left: 5px solid #32006b; 
+        }
+
+        .version > h2 { 
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .btn-bt { 
+            background-color: #7906bb63;
+            font-size: 24px;
+            align-items: center;
+            text-align: center;
+            padding: 0.1rem 0.5rem;
+            border-radius: 6px;
+            color: #a200ff;
+        }
+
+        .version > p {
+            
+        }
+
+        .h-inf {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .funtion-inf {
+            font-size: 22px;
+            margin-top: -10px;
+            font-family: iconic;
+            line-height: .9;
+            color: #836a91;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #100418;
+                color: #fefcff;
+            }
+        }
+
+    </style>
+
+    <script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Zipher HID Update</h1>
+        <p class="option">เลือกเฟิร์มแวร์</p>
+        <ul class="radios">
+            <li>
+                <label><input type="radio" name="type" value="zplast" /> Zipher-HID v2</label>
+            </li>
+        </ul>
+        <p class="button-row">
+            <esp-web-install-button class="invisible"></esp-web-install-button>
+        </p>
+        <h2 class="vv">รายละเอียด</h2>
+        <div class="info1">
+
+            <div class="version">
+                <h2> Zipher HID V2 <span class="btn-bt">Beta</span></h2>
+                
+                <p class="h-inf"> Funtion  </p>
+                <p class="funtion-inf">HID Injection: ใช้ได้กับทุกเครื่องที่รองรับคีย์บอร์ด <br>Key Support: Mobile key, Windows key, All Device <br> RunOnBoot: Boot Button For runpayload in Path ( AutoRun/HID.txt ) </p>
+            </div>
+            
+            <div class="version">
+                <h2> Zipher HID V!</h2>
+                <p class="h-inf"> Funtion </p>
+                <p class="funtion-inf">HID Injection <br>123</p>
+            </div>
+            
+
+        </div>
+
+        <div class="footer">
+            ✨ Discord <a href="https://discord.gg/x9HGCbFEeq">Zipher-Community</a>
+            &mdash;
+            ติดต่อแอดมิน <a href="https://paypal.me/smoochieelee?country.x=PH&locale.x=en_US">Zipher Cyprex</a> 🛠️
+        </div>
+
+        <script>
+            document.querySelectorAll('input[name="type"]').forEach(radio =>
+                radio.addEventListener("change", () => {
+                    const button = document.querySelector('esp-web-install-button');
+                    button.manifest = `web/manifest_${radio.value}.json`;
+                    button.classList.remove('invisible');
+                })
+            );
+        </script>
+    </div>
+</body>
+
+</html>
